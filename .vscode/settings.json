@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [],
+    "files.eol": "\n",
+    "dart.lineLength": 100,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    }
+}
