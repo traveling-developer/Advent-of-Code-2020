@@ -2,41 +2,41 @@ import 'package:adventofcode2020/advent_of_code_api.dart';
 import 'package:trotter/trotter.dart';
 
 Future<void> firstPuzzle() async {
-  var puzzelInput = await getPuzzelInputOfDay(1);
+  var puzzleInput = await getPuzzleInputOfDay(1);
 
-  var convertedPuzzelInput = convertPuzzelInput(puzzelInput);
+  var convertedPuzzleInput = convertPuzzleInput(puzzleInput);
 
-  int puzzelSolution = calculateSolution(convertedPuzzelInput, 2);
+  int puzzleSolution = calculateSolution(convertedPuzzleInput, 2);
 
-  print(puzzelSolution);
+  print(puzzleSolution);
 }
 
 Future<void> secondPuzzle() async {
-  var puzzelInput = await getPuzzelInputOfDay(1);
+  var puzzleInput = await getPuzzleInputOfDay(1);
 
-  var convertedPuzzelInput = convertPuzzelInput(puzzelInput);
+  var convertedPuzzleInput = convertPuzzleInput(puzzleInput);
 
-  int puzzelSolution = calculateSolution(convertedPuzzelInput, 3);
+  int puzzleSolution = calculateSolution(convertedPuzzleInput, 3);
 
-  print(puzzelSolution);
+  print(puzzleSolution);
 }
 
-int calculateSolution(List<int> convertedPuzzelInput, int numberOfCombinations) {
-  var combinations = Combinations(numberOfCombinations, convertedPuzzelInput);
+int calculateSolution(List<int> convertedPuzzleInput, int numberOfCombinations) {
+  var combinations = Combinations(numberOfCombinations, convertedPuzzleInput);
 
   var searchedCombination = combinations().singleWhere((element) {
     var sum = element.reduce((left, right) => left + right);
     return sum == 2020;
   });
 
-  var puzzelSolution = searchedCombination.reduce((left, right) => left * right);
+  var puzzleSolution = searchedCombination.reduce((left, right) => left * right);
 
-  return puzzelSolution;
+  return puzzleSolution;
 }
 
-List<int> convertPuzzelInput(String puzzelInput) {
+List<int> convertPuzzleInput(String puzzleInput) {
   var result =
-      puzzelInput.split('\n').where((element) => element.isNotEmpty).map((e) => int.parse(e));
+      puzzleInput.split('\n').where((element) => element.isNotEmpty).map((e) => int.parse(e));
 
   return result.toList();
 }

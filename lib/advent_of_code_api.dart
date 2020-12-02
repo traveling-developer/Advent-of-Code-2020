@@ -2,15 +2,15 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
-Future<String> getPuzzelInputOfDay(int day) async {
+Future<String> getPuzzleInputOfDay(int day) async {
   String sessionCookie = await readSessionCookieFromConfigFile();
 
-  dynamic puzzelInput = await http.read(
+  dynamic puzzleInput = await http.read(
     'https://adventofcode.com/2020/day/' + day.toString() + '/input',
     headers: {'Cookie': sessionCookie},
   );
 
-  return puzzelInput.toString();
+  return puzzleInput.toString();
 }
 
 Future<String> readSessionCookieFromConfigFile() async {
