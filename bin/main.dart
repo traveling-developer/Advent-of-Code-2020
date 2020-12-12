@@ -5,6 +5,7 @@ import 'package:adventofcode2020/day4.dart' as day4;
 import 'package:adventofcode2020/day5.dart' as day5;
 import 'package:adventofcode2020/day6.dart' as day6;
 import 'package:adventofcode2020/day7.dart' as day7;
+import 'package:adventofcode2020/day8.dart' as day8;
 
 Future<void> main() async {
   await day1.firstPuzzle();
@@ -21,4 +22,6 @@ Future<void> main() async {
   await day6.secondPuzzle();
   await day7.firstPuzzle();
   await day7.secondPuzzle();
+  await day8.firstPuzzle();
+  await day8.secondPuzzle();
 }
